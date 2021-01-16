@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `yarn storybook`
 
-Opens the storybook app on an open port\
+Opens the storybook app on an open port.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
