@@ -25,6 +25,14 @@ You will also see any lint errors in the console.
 
 Components can be found in `/src/components`
 
+All components are written using TypeScript, and Styled Components
+
 ## Stories
 
 Stories can be found in `/src/stories`
+
+All stories are written using Typescript
+
+## Reuse
+
+If you like any components then please feel free to reuse them or use them as inspiration for your own versions. These components are the result of trial and error, working with other developers, and inspiration from others online. I'm more than happy to keep sharing the love - just give the repo a star if you reuse something!
