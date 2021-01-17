@@ -4,9 +4,17 @@ This is a work in progress collection of components that I find myself using on 
 
 ## Running the project
 
+Clone the repo:
+
+`git clone https://github.com/justindaiello/component-storybook.git`
+
+Install dependencies:
+
+`yarn install`
+
 In the project directory, you can run:
 
-### `yarn storybook`
+`yarn storybook`
 
 Opens the storybook app on an open port.
 
