@@ -6,7 +6,7 @@ import { FontTypes } from '../../styles/theme';
 /**
  * Select font size based on size prop
  * @param {string} size - size prop, defaulted to medium
- * @param {object} FontTypes - custom theme font sizes object
+ * @param {FontTypes} theme - custom theme font sizes object
  * @returns {string} correct font size from the theme
  */
 function parseFontSize(theme: FontTypes, size: string): string {
