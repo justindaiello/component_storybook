@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { StyledSpinner } from './Spinner.styled';
 
-export interface SpinnerProps {
+export type SpinnerProps = {
   large: boolean
 }
 
