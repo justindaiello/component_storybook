@@ -25,7 +25,7 @@ You will also see any lint errors in the console.
 
 Components can be found in `/src/components`
 
-All components are written using TypeScript, and Styled Components
+All components are written using TypeScript and Styled Components
 
 ## Stories
 
