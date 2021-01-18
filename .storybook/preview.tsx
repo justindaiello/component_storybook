@@ -5,6 +5,12 @@ import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/typ
 
 import theme from '../src/styles/theme';
 import GlobalStyle from '../src/styles/GlobalStyle.styled';
+import fontawesomeConfig from '../src/utils/fontawesomeConfig';
+
+/**
+ * initialize font awesome library
+ */
+fontawesomeConfig.init();
 
 /**
  * Wrap storybook with StyledComponents config
