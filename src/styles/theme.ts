@@ -13,12 +13,12 @@ const theme: object = {
   // ** Color Variables **
   // *********************
 
-  purple: '#3c2370',
-  pink: '#e75aa1',
+  primary: '#3c2370',
+  secondary: '#e75aa1',
+  tertiary: '#685bd5',
+  quaternary: '#20add1',
   black: '#111219',
   white: '#ffffff',
-  darkBlue: '#685bd5',
-  lightBlue: '#20add1',
   danger: '#bf0a30',
   warning: '#edcc65',
 

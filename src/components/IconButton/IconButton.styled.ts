@@ -10,22 +10,22 @@ export const StyledIconButton = styled.button<ButtonProps>`
   cursor: pointer;
   transition: color 0.2s;
   background: transparent;
-  color: ${({ theme }) => theme.purple};
+  color: ${({ theme }) => theme.primary};
 
   svg {
     /* visual */
-    fill: ${({ theme }) => theme.purple};
+    fill: ${({ theme }) => theme.primary};
   }
 
   &:hover,
   &:active,
   &:focus {
     /* visual */
-    color: ${({ theme }) => theme.pink};
+    color: ${({ theme }) => theme.secondary};
 
     svg {
       /* visual */
-      fill: ${({ theme }) => theme.pink};
+      fill: ${({ theme }) => theme.secondary};
     }
   }
 

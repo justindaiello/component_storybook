@@ -54,7 +54,7 @@ export const StyledSpinner = styled.div<SpinnerProps>`
       /* visual */
       content: '';
       animation: ${rotateBefore} 2s infinite ease-in-out both;
-      background-color: ${({ theme }) => theme.purple};
+      background-color: ${({ theme }) => theme.primary};
 
       /* box-model */
       display: block;
