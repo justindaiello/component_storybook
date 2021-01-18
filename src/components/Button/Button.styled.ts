@@ -101,7 +101,7 @@ const buttonDanger = css`
 /**
  * Parse variant type and return appropriate css block
  * @param {ButtonEnums} variant - variant enum
- * @returns {FlattenSimpleInterpolation}
+ * @returns {FlattenInterpolation}
  */
 
 function parseVariant(
