@@ -1,6 +1,6 @@
 # Component Storybook
 
-This is a work in progress collection of components that I find myself using on various projects in some form or fashion. I'll be adding to this over time and this is just the beginning of an ongoing project.
+This is a work in progress collection of re-useable React components that I find myself using on various projects in some form or fashion. This is just the beginning of an ongoing project and I'll be adding to this over time.
 
 ## Running the project
 
