@@ -2,13 +2,17 @@ import * as React from 'react';
 
 import AccordionItem from './AccordionItem';
 
-export type AccordionProps = {
-  label: string
-}
-
 type OpenState = { [label: string]: boolean }
 
-const Accordion: React.FC<AccordionProps> = ({ children, label }) => {
+type ChildProps = {
+  props: {
+    label: string,
+    children: React.ReactChild | ChildProps | ChildProps[]
+  }
+}
+
+const Accordion: React.FC = ({ children }) => {
+  console.log('[children]', children)
   const [open, setOpen] = React.useState<OpenState>({})
 
   function handleClick(label: string): void {
@@ -19,14 +23,16 @@ const Accordion: React.FC<AccordionProps> = ({ children, label }) => {
 
   return (
     <React.Fragment>
-      <AccordionItem
-        key={label}
-        isOpen={Boolean(open[label])}
-        label={label}
-        handleClick={handleClick}
-      >
-        {children}
-      </AccordionItem>
+      {React.Children.map(children, ({ props }: ChildProps) => (
+        <AccordionItem
+          key={props.label}
+          isOpen={Boolean(open[props.label])}
+          label={props.label}
+          handleClick={handleClick}
+        >
+          {props.children}
+        </AccordionItem>
+      ))}
     </React.Fragment>
   )
 }
