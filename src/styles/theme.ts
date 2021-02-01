@@ -8,6 +8,17 @@ export type FontTypes = {
   fontSizeLg: string;
 };
 
+export type ColorTypes = {
+  primary: string;
+  secondary: string;
+  tertiary: string;
+  quaternary: string;
+  black: string;
+  white: string;
+  danger: string;
+  warning: string;
+};
+
 const theme: object = {
   // *********************
   // ** Color Variables **
