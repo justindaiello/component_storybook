@@ -1,4 +1,3 @@
-import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
 import { StyledItemWrapper, StyledButton, StyledChevron } from './Accordion.styled';
@@ -6,18 +5,19 @@ import { StyledItemWrapper, StyledButton, StyledChevron } from './Accordion.styl
 export type ItemProps = {
   isOpen?: boolean,
   label?: string,
-  handleClick?: Function,
+  handleClick: Function
 }
 
-const AccordionItem: React.FC<ItemProps> = ({ label, isOpen, children }) => {
+const AccordionItem: React.FC<ItemProps> = ({ label, isOpen, children, handleClick }) => {
   return (
     <StyledItemWrapper>
-      <StyledButton>
+      <StyledButton onClick={() => handleClick(label)}>
         <span>{label}</span>
         <StyledChevron
           size="lg"
           title="expand"
           isOpen={isOpen}
+          handleClick={() => handleClick(label)}
           icon={['fas', 'chevron-down']}
         />
       </StyledButton>

@@ -4,15 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ItemProps } from './AccordionItem';
 
 export const StyledItemWrapper = styled.div`
-  border-bottom: ${({ theme }) => `1px solid ${theme.gray200}`};
+  /* box-model */
+  border-bottom: ${({ theme }) => `1px solid ${theme.primary}`};
   padding: 1.5rem;
 
   &:first-of-type {
-    border-top: ${({ theme }) => `1px solid ${theme.gray200}`};
+    /* box-model */
+    border-top: ${({ theme }) => `1px solid ${theme.primary}`};
   }
 `;
 
 export const StyledChevron = styled(FontAwesomeIcon)<ItemProps>`
+  /* visual */
   color: ${({ theme }) => theme.primary};
   transition: 0.2s linear all;
   transform: ${({ isOpen }) => isOpen && 'rotate(180deg)'};
@@ -20,10 +23,19 @@ export const StyledChevron = styled(FontAwesomeIcon)<ItemProps>`
 
 /* Full width button for better accessibility */
 export const StyledButton = styled.button`
+  /* typography */
   font-size: ${({ theme }) => theme.fontSizeLg};
-  width: 100%;
+
+  /* positioning */
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* box-model */
+  width: 100%;
   padding: 0;
+
+  /* visual */
+  background: transparent;
+  border: none;
 `;

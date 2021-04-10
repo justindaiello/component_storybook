@@ -4,15 +4,11 @@ import AccordionItem from './AccordionItem';
 
 type OpenState = { [label: string]: boolean }
 
-type ChildProps = {
-  props: {
-    label: string,
-    children: React.ReactChild | ChildProps | ChildProps[]
-  }
+export type AccordionProps = {
+  children: JSX.Element[]
 }
 
-const Accordion: React.FC = ({ children }) => {
-  console.log('[children]', children)
+const Accordion: React.FC<AccordionProps> = ({ children }) => {
   const [open, setOpen] = React.useState<OpenState>({})
 
   function handleClick(label: string): void {
@@ -23,17 +19,18 @@ const Accordion: React.FC = ({ children }) => {
 
   return (
     <React.Fragment>
-      {React.Children.map(children, ({ props }: ChildProps) => (
+      {React.Children.map(children, child => (
         <AccordionItem
-          key={props.label}
-          isOpen={Boolean(open[props.label])}
-          label={props.label}
+          key={child.props["data-label"]}
+          isOpen={Boolean(open[child.props["data-label"]])}
+          label={child.props["data-label"]}
           handleClick={handleClick}
         >
-          {props.children}
+          {child.props.children}
         </AccordionItem>
-      ))}
-    </React.Fragment>
+      ))
+      }
+    </React.Fragment >
   )
 }
 
