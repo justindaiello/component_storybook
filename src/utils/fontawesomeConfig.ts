@@ -11,13 +11,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
   faTimes,
+  faCheck,
   faChevronDown,
   faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 const fontawesomeConfig = {
   init: () => {
-    library.add(faTimes, faExclamationCircle, faChevronDown);
+    library.add(faTimes, faExclamationCircle, faChevronDown, faCheck);
   },
 };
 

@@ -17,6 +17,9 @@ export type ColorTypes = {
   white: string;
   danger: string;
   warning: string;
+  gray100: string;
+  gray200: string;
+  gray300: string;
 };
 
 const theme: object = {
@@ -32,6 +35,9 @@ const theme: object = {
   white: '#ffffff',
   danger: '#bf0a30',
   warning: '#edcc65',
+  gray100: '#eef3f9',
+  gray200: '#bcc8d9',
+  gray300: '#8591a8',
 
   // ****************
   // ** Typography **
