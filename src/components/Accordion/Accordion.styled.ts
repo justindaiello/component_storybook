@@ -39,3 +39,8 @@ export const StyledButton = styled.button`
   background: transparent;
   border: none;
 `;
+
+export const StyledItem = styled.div`
+  /* box-model */
+  margin-top: 1rem;
+`;

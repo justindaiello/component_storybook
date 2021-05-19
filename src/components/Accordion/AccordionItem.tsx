@@ -1,6 +1,11 @@
 import * as React from 'react';
 
-import { StyledItemWrapper, StyledButton, StyledChevron } from './Accordion.styled';
+import {
+  StyledItem,
+  StyledButton,
+  StyledChevron,
+  StyledItemWrapper,
+} from './Accordion.styled';
 
 export type ItemProps = {
   isOpen?: boolean,
@@ -21,7 +26,7 @@ const AccordionItem: React.FC<ItemProps> = ({ label, isOpen, children, handleCli
           icon={['fas', 'chevron-down']}
         />
       </StyledButton>
-      {isOpen && <span>{children}</span>}
+      {isOpen && <StyledItem>{children}</StyledItem>}
     </StyledItemWrapper>
   )
 }
