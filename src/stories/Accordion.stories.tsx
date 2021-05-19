@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import Accordion, { AccordionProps } from '../components/Accordion';
@@ -10,7 +9,7 @@ export default {
 
 const Template: Story<AccordionProps> = () => (
   <Accordion>
-    <div data-label="Section One">
+    <div data-label="Section One" className="accordion-child">
       Hi
     </div>
     <div data-label="Section 2">

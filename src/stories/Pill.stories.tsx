@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import Pill, { PillProps, PillEnums } from '../components/Pill';
