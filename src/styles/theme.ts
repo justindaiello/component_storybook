@@ -62,11 +62,13 @@ const theme: object = {
   // ** Borders and Shadows **
   // *************************
 
+  lightBoxShadow: '0 4px 30px rgba(0, 0, 0, 0.3)',
   boxShadow: '0px 0px 10px rgba(156, 156, 156, 0.5)',
   boxShadowBottom: '0px 3px 6px rgba(156, 156, 156, 0.5)',
   borderRadiusLg: '30px',
   borderRadius: '9px',
   borderRadiusSm: '6px',
+  borderRadiusMd: '19px',
 };
 
 export default theme;
