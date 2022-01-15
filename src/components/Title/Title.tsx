@@ -1,19 +1,19 @@
 import * as React from 'react';
 
-import { StyledTitle } from './Title.styled'
+import { StyledTitle } from './Title.styled';
 
 export type TitleProps = {
   as: keyof JSX.IntrinsicElements;
   size: string;
-  children: string | object;
-}
+  children: React.ReactNode;
+};
 
-const Title: React.FC<TitleProps> = ({ children, as = "span", size }) => {
+const Title = ({ children, as = 'span', size }: TitleProps) => {
   return (
     <StyledTitle as={as} size={size}>
       {children}
     </StyledTitle>
-  )
-}
+  );
+};
 
 export default Title;

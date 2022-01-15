@@ -6,22 +6,21 @@ export enum PillEnums {
   PRIMARY,
   SECONDARY,
   WARNING,
-  DANGER
+  DANGER,
 }
 
 export type PillProps = {
-  variant: PillEnums,
-  outline?: boolean
-  children: React.ReactNode
-}
+  variant: PillEnums;
+  outline?: boolean;
+  children: React.ReactNode;
+};
 
-
-const Pill: React.FC<PillProps> = ({ children, variant, outline }) => {
+const Pill = ({ children, variant, outline }: PillProps) => {
   return (
     <StyledPill variant={variant} outline={outline}>
       <span>{children}</span>
     </StyledPill>
-  )
-}
+  );
+};
 
 export default Pill;

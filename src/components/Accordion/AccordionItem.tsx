@@ -8,12 +8,13 @@ import {
 } from './Accordion.styled';
 
 export type ItemProps = {
-  isOpen?: boolean,
-  label?: string,
-  handleClick: Function
-}
+  isOpen?: boolean;
+  label?: string;
+  handleClick: Function;
+  children?: React.ReactNode;
+};
 
-const AccordionItem: React.FC<ItemProps> = ({ label, isOpen, children, handleClick }) => {
+const AccordionItem = ({ label, isOpen, children, handleClick }: ItemProps) => {
   return (
     <StyledItemWrapper>
       <StyledButton onClick={() => handleClick(label)}>
@@ -28,7 +29,7 @@ const AccordionItem: React.FC<ItemProps> = ({ label, isOpen, children, handleCli
       </StyledButton>
       {isOpen && <StyledItem>{children}</StyledItem>}
     </StyledItemWrapper>
-  )
-}
+  );
+};
 
-export default AccordionItem
+export default AccordionItem;

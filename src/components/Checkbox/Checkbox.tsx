@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { StyledCheckbox } from './Checkbox.styled';
 
 export type CheckboxProps = {
-  label: string,
-  checked: boolean,
-  handleChange: React.ChangeEventHandler<HTMLInputElement>
-}
+  label: string;
+  checked: boolean;
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
+};
 
-const Checkbox: React.FC<CheckboxProps> = ({ label, checked, handleChange, ...rest }) => {
+const Checkbox = ({ label, checked, handleChange, ...rest }: CheckboxProps) => {
   return (
     <StyledCheckbox>
       <input
@@ -19,13 +19,10 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked, handleChange, ...re
         onChange={handleChange}
         {...rest}
       />
-      <FontAwesomeIcon
-        icon={['fas', 'check']}
-        title='check'
-      />
+      <FontAwesomeIcon icon={['fas', 'check']} title="check" />
       <label htmlFor={label}>{label}</label>
     </StyledCheckbox>
-  )
-}
+  );
+};
 
 export default Checkbox;

@@ -3,10 +3,10 @@ import * as React from 'react';
 import { StyledSpinner } from './Spinner.styled';
 
 export type SpinnerProps = {
-  large: boolean
-}
+  large: boolean;
+};
 
-const Spinner: React.FC<SpinnerProps> = ({ large }) => {
+const Spinner = ({ large }: SpinnerProps) => {
   return (
     <StyledSpinner large={large}>
       <div className="dot" />
@@ -16,7 +16,7 @@ const Spinner: React.FC<SpinnerProps> = ({ large }) => {
       <div className="dot" />
       <div className="dot" />
     </StyledSpinner>
-  )
-}
+  );
+};
 
-export default Spinner
+export default Spinner;

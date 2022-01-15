@@ -6,32 +6,27 @@ export enum ButtonEnums {
   PRIMARY,
   SECONDARY,
   WARNING,
-  DANGER
+  DANGER,
 }
 
 export type ButtonProps = {
-  small?: boolean,
-  variant: ButtonEnums,
+  small?: boolean;
+  variant: ButtonEnums;
   onClick: (e?: React.MouseEvent) => void;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   small,
   onClick,
   children,
   variant = ButtonEnums.PRIMARY,
   ...rest
-}) => {
+}: ButtonProps) => {
   return (
-    <StyledButton
-      small={small}
-      variant={variant}
-      onClick={onClick}
-      {...rest}
-    >
+    <StyledButton small={small} variant={variant} onClick={onClick} {...rest}>
       {children}
     </StyledButton>
-  )
-}
+  );
+};
 
 export default Button;
